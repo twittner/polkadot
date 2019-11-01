@@ -2768,7 +2768,7 @@ dependencies = [
  "srml-babe 2.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)",
  "substrate-application-crypto 2.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)",
  "substrate-client 2.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)",
- "substrate-primitives 2.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)",
+ "substrate-primitives 2.0.0 (git+https://github.com/paritytech/substrate?branch=kiz-serde-phragmen)",
  "substrate-serializer 2.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)",
 ]
 
@@ -3773,6 +3773,14 @@ dependencies = [
 [[package]]
 name = "sr-std"
 version = "2.0.0"
+source = "git+https://github.com/paritytech/substrate?branch=kiz-serde-phragmen#aef11c9468ff25d12683cda46725d3903a33257a"
+dependencies = [
+ "rustc_version 0.2.3 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "sr-std"
+version = "2.0.0"
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-master#a746d38d2b76da28e0e5fe77bad6c43ecc4d88c7"
 dependencies = [
  "rustc_version 0.2.3 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -4642,6 +4650,16 @@ dependencies = [
 [[package]]
 name = "substrate-debug-derive"
 version = "2.0.0"
+source = "git+https://github.com/paritytech/substrate?branch=kiz-serde-phragmen#aef11c9468ff25d12683cda46725d3903a33257a"
+dependencies = [
+ "proc-macro2 1.0.6 (registry+https://github.com/rust-lang/crates.io-index)",
+ "quote 1.0.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "syn 1.0.7 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "substrate-debug-derive"
+version = "2.0.0"
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-master#a746d38d2b76da28e0e5fe77bad6c43ecc4d88c7"
 dependencies = [
  "proc-macro2 1.0.6 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -4671,6 +4689,17 @@ dependencies = [
  "substrate-wasm-interface 2.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)",
  "tiny-keccak 1.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "wasmi 0.5.1 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "substrate-externalities"
+version = "2.0.0"
+source = "git+https://github.com/paritytech/substrate?branch=kiz-serde-phragmen#aef11c9468ff25d12683cda46725d3903a33257a"
+dependencies = [
+ "environmental 1.0.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "primitive-types 0.5.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "sr-std 2.0.0 (git+https://github.com/paritytech/substrate?branch=kiz-serde-phragmen)",
+ "substrate-primitives-storage 2.0.0 (git+https://github.com/paritytech/substrate?branch=kiz-serde-phragmen)",
 ]
 
 [[package]]
@@ -4886,6 +4915,44 @@ dependencies = [
 [[package]]
 name = "substrate-primitives"
 version = "2.0.0"
+source = "git+https://github.com/paritytech/substrate?branch=kiz-serde-phragmen#aef11c9468ff25d12683cda46725d3903a33257a"
+dependencies = [
+ "base58 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "blake2-rfc 0.2.18 (registry+https://github.com/rust-lang/crates.io-index)",
+ "byteorder 1.3.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ed25519-dalek 0.9.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "hash-db 0.15.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "hash256-std-hasher 0.15.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "hex 0.3.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "impl-serde 0.2.3 (registry+https://github.com/rust-lang/crates.io-index)",
+ "lazy_static 1.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libsecp256k1 0.3.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "log 0.4.8 (registry+https://github.com/rust-lang/crates.io-index)",
+ "num-traits 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)",
+ "parity-scale-codec 1.0.6 (registry+https://github.com/rust-lang/crates.io-index)",
+ "parking_lot 0.9.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "primitive-types 0.5.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "rand 0.7.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "regex 1.3.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "rustc-hex 2.0.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "schnorrkel 0.8.5 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.102 (registry+https://github.com/rust-lang/crates.io-index)",
+ "sha2 0.8.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "sr-std 2.0.0 (git+https://github.com/paritytech/substrate?branch=kiz-serde-phragmen)",
+ "substrate-bip39 0.3.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "substrate-debug-derive 2.0.0 (git+https://github.com/paritytech/substrate?branch=kiz-serde-phragmen)",
+ "substrate-externalities 2.0.0 (git+https://github.com/paritytech/substrate?branch=kiz-serde-phragmen)",
+ "substrate-primitives-storage 2.0.0 (git+https://github.com/paritytech/substrate?branch=kiz-serde-phragmen)",
+ "tiny-bip39 0.6.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "tiny-keccak 1.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "twox-hash 1.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "wasmi 0.5.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "zeroize 0.10.1 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "substrate-primitives"
+version = "2.0.0"
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-master#a746d38d2b76da28e0e5fe77bad6c43ecc4d88c7"
 dependencies = [
  "base58 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -4919,6 +4986,17 @@ dependencies = [
  "twox-hash 1.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "wasmi 0.5.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "zeroize 0.10.1 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "substrate-primitives-storage"
+version = "2.0.0"
+source = "git+https://github.com/paritytech/substrate?branch=kiz-serde-phragmen#aef11c9468ff25d12683cda46725d3903a33257a"
+dependencies = [
+ "impl-serde 0.2.3 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.102 (registry+https://github.com/rust-lang/crates.io-index)",
+ "sr-std 2.0.0 (git+https://github.com/paritytech/substrate?branch=kiz-serde-phragmen)",
+ "substrate-debug-derive 2.0.0 (git+https://github.com/paritytech/substrate?branch=kiz-serde-phragmen)",
 ]
 
 [[package]]
@@ -6392,6 +6470,7 @@ dependencies = [
 "checksum sr-io 2.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)" = "<none>"
 "checksum sr-primitives 2.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)" = "<none>"
 "checksum sr-staking-primitives 2.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)" = "<none>"
+"checksum sr-std 2.0.0 (git+https://github.com/paritytech/substrate?branch=kiz-serde-phragmen)" = "<none>"
 "checksum sr-std 2.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)" = "<none>"
 "checksum sr-version 2.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)" = "<none>"
 "checksum srml-authority-discovery 0.1.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)" = "<none>"
@@ -6452,8 +6531,10 @@ dependencies = [
 "checksum substrate-consensus-common 2.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)" = "<none>"
 "checksum substrate-consensus-slots 2.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)" = "<none>"
 "checksum substrate-consensus-uncles 2.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)" = "<none>"
+"checksum substrate-debug-derive 2.0.0 (git+https://github.com/paritytech/substrate?branch=kiz-serde-phragmen)" = "<none>"
 "checksum substrate-debug-derive 2.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)" = "<none>"
 "checksum substrate-executor 2.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)" = "<none>"
+"checksum substrate-externalities 2.0.0 (git+https://github.com/paritytech/substrate?branch=kiz-serde-phragmen)" = "<none>"
 "checksum substrate-externalities 2.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)" = "<none>"
 "checksum substrate-finality-grandpa 2.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)" = "<none>"
 "checksum substrate-finality-grandpa-primitives 2.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)" = "<none>"
@@ -6467,7 +6548,9 @@ dependencies = [
 "checksum substrate-panic-handler 2.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)" = "<none>"
 "checksum substrate-peerset 2.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)" = "<none>"
 "checksum substrate-phragmen 2.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)" = "<none>"
+"checksum substrate-primitives 2.0.0 (git+https://github.com/paritytech/substrate?branch=kiz-serde-phragmen)" = "<none>"
 "checksum substrate-primitives 2.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)" = "<none>"
+"checksum substrate-primitives-storage 2.0.0 (git+https://github.com/paritytech/substrate?branch=kiz-serde-phragmen)" = "<none>"
 "checksum substrate-primitives-storage 2.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)" = "<none>"
 "checksum substrate-rpc 2.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)" = "<none>"
 "checksum substrate-rpc-api 2.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-master)" = "<none>"
