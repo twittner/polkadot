@@ -6,19 +6,19 @@ edition = "2018"
 license = "GPL-3.0"
 
 [dependencies]
-sc-block-builder = { git = "https://github.com/paritytech/substrate", branch = "master" }
-sc-consensus = { git = "https://github.com/paritytech/substrate", branch = "master" }
-sc-light = { git = "https://github.com/paritytech/substrate", branch = "master" }
-sc-service = { git = "https://github.com/paritytech/substrate", branch = "master", features = ["test-helpers"],  default-features = false }
-substrate-test-client = { git = "https://github.com/paritytech/substrate", branch = "master" }
-sp-core = { git = "https://github.com/paritytech/substrate", branch = "master" }
+sc-block-builder = { git = "https://github.com/twittner/substrate", branch = "libp2p-0.20.0" }
+sc-consensus = { git = "https://github.com/twittner/substrate", branch = "libp2p-0.20.0" }
+sc-light = { git = "https://github.com/twittner/substrate", branch = "libp2p-0.20.0" }
+sc-service = { git = "https://github.com/twittner/substrate", branch = "libp2p-0.20.0", features = ["test-helpers"],  default-features = false }
+substrate-test-client = { git = "https://github.com/twittner/substrate", branch = "libp2p-0.20.0" }
+sp-core = { git = "https://github.com/twittner/substrate", branch = "libp2p-0.20.0" }
 polkadot-test-runtime = { path = ".." }
 polkadot-runtime-common = { path = "../../common" }
 polkadot-primitives = { path = "../../../primitives" }
-sp-runtime = { git = "https://github.com/paritytech/substrate", branch = "master" }
-sp-api = { git = "https://github.com/paritytech/substrate", branch = "master" }
-sp-blockchain = { git = "https://github.com/paritytech/substrate", branch = "master" }
+sp-runtime = { git = "https://github.com/twittner/substrate", branch = "libp2p-0.20.0" }
+sp-api = { git = "https://github.com/twittner/substrate", branch = "libp2p-0.20.0" }
+sp-blockchain = { git = "https://github.com/twittner/substrate", branch = "libp2p-0.20.0" }
 codec = { package = "parity-scale-codec", version = "1.0.0" }
-sc-client-api = { git = "https://github.com/paritytech/substrate", branch = "master" }
-pallet-timestamp = { git = "https://github.com/paritytech/substrate", branch = "master" }
+sc-client-api = { git = "https://github.com/twittner/substrate", branch = "libp2p-0.20.0" }
+pallet-timestamp = { git = "https://github.com/twittner/substrate", branch = "libp2p-0.20.0" }
 futures = "0.3.1"
